@@ -2,6 +2,7 @@ var React = require('react');
 var ModalTrigger = require('react-bootstrap').ModalTrigger;
 var Button = require('react-bootstrap').Button;
 var Modal = require('react-bootstrap').Modal;
+var Overlay = require('react-bootstrap').Overlay;
 
 const MyModal = React.createClass({
   render() {
@@ -46,7 +47,23 @@ const MyModal = React.createClass({
 
 
 module.exports = React.createClass({
+  getInitialState: function() {
+    return {show: false}
+  },
+  toggle: function() {
+    this.setState({ show: !this.state.show });
+  },
   render: function() {
+    var style = {
+      position: 'absolute',
+      backgroundColor: '#EEE',
+      boxShadow: '0 5px 10px rgba(0, 0, 0, 0.2)',
+      border: '1px solid #CCC',
+      borderRadius: 3,
+      marginLeft: -5,
+      marginTop: 5,
+      padding: 10
+    };
     return (
       <footer className="text-center">
         <hr style={{width:'20%'}} />
@@ -69,7 +86,18 @@ module.exports = React.createClass({
 
           </div>
           <div className="col-sm-12 col-md-4 text-center">
-              <h3><a href="resume.pdf">resume</a></h3>
+              <h3><a href="#" ref="target" onClick={this.toggle}>resume</a></h3>
+              <Overlay
+                show={this.state.show}
+                onHide={() => this.setState({ show: false })}
+                placement="right"
+                container={this}
+                target={() => React.findDOMNode(this.refs.target)}
+              >
+                <div style={style}>
+                  Please <a href="mailto:johnwiseheart@gmail.com">email me</a> for my resume.
+                </div>
+            </Overlay>
           </div>
           <div className="col-sm-12 text-center">
           <small>&copy; John Wiseheart 2015.</small>
