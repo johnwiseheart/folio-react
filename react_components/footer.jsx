@@ -18,21 +18,18 @@ const MyModal = React.createClass({
               <ul className="list-inline">
                 <li>HTML5</li>
                 <li>CSS3</li>
+                <li><a href="https://facebook.github.io/react/">React</a></li>
+                <li><a href="http://alt.js.org/">Alt</a></li>
                 <li>JQuery</li>
-                <li><a href="http://foundation.zurb.com/">Foundation</a></li>
-                <li><a href="http://getbootstrap.com/">Bootstrap</a></li>
-                <li><a href="http://purecss.io/">Pure</a></li>
               </ul>
             </div>
             <div className="col-sm-6">
               <h3>Back End</h3>
               <ul className="list-inline">
                 <li>Python</li>
+                <li>Javascript</li>
                 <li>PHP</li>
-                <li><a href="http://anchorcms.com/">Anchor</a></li>
                 <li><a href="http://flask.pocoo.org/">Flask</a></li>
-                <li><a href="https://www.djangoproject.com/">Django</a></li>
-                <li><a href="https://wordpress.org/">Wordpress</a></li>
               </ul>
             </div>
           </div>

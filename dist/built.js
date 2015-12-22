@@ -28888,21 +28888,18 @@ const MyModal = React.createClass({displayName: "MyModal",
               React.createElement("ul", {className: "list-inline"}, 
                 React.createElement("li", null, "HTML5"), 
                 React.createElement("li", null, "CSS3"), 
-                React.createElement("li", null, "JQuery"), 
-                React.createElement("li", null, React.createElement("a", {href: "http://foundation.zurb.com/"}, "Foundation")), 
-                React.createElement("li", null, React.createElement("a", {href: "http://getbootstrap.com/"}, "Bootstrap")), 
-                React.createElement("li", null, React.createElement("a", {href: "http://purecss.io/"}, "Pure"))
+                React.createElement("li", null, React.createElement("a", {href: "https://facebook.github.io/react/"}, "React")), 
+                React.createElement("li", null, React.createElement("a", {href: "http://alt.js.org/"}, "Alt")), 
+                React.createElement("li", null, "JQuery")
               )
             ), 
             React.createElement("div", {className: "col-sm-6"}, 
               React.createElement("h3", null, "Back End"), 
               React.createElement("ul", {className: "list-inline"}, 
                 React.createElement("li", null, "Python"), 
+                React.createElement("li", null, "Javascript"), 
                 React.createElement("li", null, "PHP"), 
-                React.createElement("li", null, React.createElement("a", {href: "http://anchorcms.com/"}, "Anchor")), 
-                React.createElement("li", null, React.createElement("a", {href: "http://flask.pocoo.org/"}, "Flask")), 
-                React.createElement("li", null, React.createElement("a", {href: "https://www.djangoproject.com/"}, "Django")), 
-                React.createElement("li", null, React.createElement("a", {href: "https://wordpress.org/"}, "Wordpress"))
+                React.createElement("li", null, React.createElement("a", {href: "http://flask.pocoo.org/"}, "Flask"))
               )
             )
           )
