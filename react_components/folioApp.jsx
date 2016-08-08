@@ -26,7 +26,9 @@ module.exports = React.createClass({
         var gist = result.filter(function (gist) {
           return gist.id = self.props.gistId;
         });
-        var url = gist[0].files.projects.raw_url;
+        var url = gist.filter(item => {
+          return item.description == 'projects'
+        })[0].files.projects.raw_url;
         $.get(url, function(result) {
             result = JSON.parse(result);
             self.setState({repos: repos.concat(result).sort(function (a, b) {
